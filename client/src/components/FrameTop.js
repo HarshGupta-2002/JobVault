@@ -23,7 +23,7 @@ const FrameTop = () => {
         const fetchJobs = async () => {
             try {
                 const query = new URLSearchParams(filters).toString();
-                const response = await fetch(`http://localhost:5000/api/jobs?${query}`);
+                const response = await fetch(`https://jobvault.onrender.com/api/jobs?${query}`);
                 const data = await response.json();
                 setJobs(data);
             } catch (error) {
